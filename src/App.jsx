@@ -1,15 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useState } from 'react';
 import './App.css'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <Navbar />
+      <Routes>
+        <Route exact path='/' element='Home' />
+        <Route exact path='/about' element='About' />
+        <Route exact path='/projects' element='Projects' />
+        <Route exact path='/skills' element='Skills' />
+        <Route exact path='/contact' element='Contact' />
+      </Routes>
     </>
   )
 }
