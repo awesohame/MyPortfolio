@@ -1,14 +1,14 @@
 import './Navbar.css';
-import pfpimg from '../assets/borderpfp1.png';
+import navimg from '../assets/SA.png';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return (
-        <div className="h-screen w-1/6 bg-[#24282d]">
-            <div className="flex flex-col items-center w-full p-1">
-                <img src={pfpimg} alt="img" className="h-40 w-40 m-6" />
+        <div className="h-screen w-[15%] bg-[#24282d]">
+            <div className="flex flex-col items-center w-full p-1 h-1/5">
+                <img src={navimg} alt="img" className="h-20 w-20 m-6" />
             </div>
-            <div className="">
+            <div className="h-3/5 flex flex-col justify-center">
                 <ul className="flex flex-col items-center">
                     <li className="rounded-lg text-2xl/10 p-3 m-2 w-3/4 flex items-center hover:bg-[#1a1b1b]">
                         <Link to="/" className='h-full w-full flex items-center'>
@@ -42,12 +42,8 @@ export default function Navbar() {
                             <p className="pl-3 text-[#eeeeee]">Contact</p>
                         </Link>
                     </li>
-
                 </ul>
-
             </div>
-
-
         </div >
     )
 }

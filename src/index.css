@@ -3,7 +3,7 @@ Palette
 darker greyy #1a1b1b
 dark greyy #303841
 dark greenish greyy #3A4750
-yello #F6C90E
+yello #ffc54d
 light greyy #EEEEEE
 */
 
@@ -14,7 +14,7 @@ light greyy #EEEEEE
 #root {
   height: 100vh;
   width: 100vw;
-  background-color: #303841;
+  background-color: #61677A;
   font-family: 'Poppins', sans-serif;
   display: flex;
 }
