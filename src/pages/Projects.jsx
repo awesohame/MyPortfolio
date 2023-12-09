@@ -1,6 +1,6 @@
 import './Projects.css';
 import projectlist from '../assets/projectlist';
-// import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Projects() {
     return (
@@ -23,9 +23,7 @@ export default function Projects() {
                                 ))}
                             </ul>
                             <div className="flex justify-center items-center mt-4">
-                                {/* <Link> */}
-                                <a href={project.code} target="_blank" rel="noreferrer" className="bg-[#eeeeee] rounded-xl m-2 py-1 px-4 text-lg text-[#24282d]">View Code</a>
-                                {/* </Link> */}
+                                <Link to={project.code} target="_blank" rel="noreferrer" className="bg-[#eeeeee] rounded-xl m-2 py-1 px-4 text-lg text-[#24282d]">View Code</Link>
                             </div>
                         </div>
                     </div>
