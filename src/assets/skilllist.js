@@ -23,12 +23,12 @@ const skilllist = [
     {
         title: "Web Development",
         images: [webdev, bootstrap, tailwind, nodejs, expressjs, mysql, mongodb, react],
-        id: 1,
+        id: 2,
     },
     {
         title: "Frameworks and Tools",
         images: [git, figma, canva, ps],
-        id: 1,
+        id: 3,
     },
 ];
 
