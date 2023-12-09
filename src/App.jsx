@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import Skills from './pages/Skills';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
         <Route exact path='/' Component={Home} />
         <Route exact path='/about' Component={About} />
         <Route exact path='/projects' Component={Projects} />
-        <Route exact path='/skills' element='Skills' />
+        <Route exact path='/skills' Component={Skills} />
         <Route exact path='/contact' element='Contact' />
       </Routes>
     </>
