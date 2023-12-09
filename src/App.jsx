@@ -7,6 +7,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
+import Resume from './pages/Resume';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/projects' Component={Projects} />
         <Route exact path='/skills' Component={Skills} />
         <Route exact path='/contact' Component={Contact} />
+        <Route exact path='/resume' Component={Resume} />
       </Routes>
     </>
   )
