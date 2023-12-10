@@ -34,7 +34,7 @@ let navdata = [
 
 export default function Navbar() {
     return (
-        <div className="h-screen w-[15%] bg-[#24282d]">
+        <div className="h-screen basis-[15%] shrink-0 bg-[#24282d]">
             <div className="flex flex-col items-center w-full p-1 h-1/5">
                 <img src={navimg} alt="img" className="h-20 w-20 m-6" />
             </div>

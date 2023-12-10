@@ -3,7 +3,7 @@ import skilllist from '../assets/skilllist';
 
 export default function Skills() {
     return (
-        <div className='h-screen w-[85%] flex justify-center'>
+        <div className='w-full h-screen grow-1 flex justify-center'>
             <div className='w-[85%] h-full'>
                 {skilllist.map((skill) => (
                     <div className="border-y-2 border-[#24282d] h-1/3 flex items-center" key={skill.id}>

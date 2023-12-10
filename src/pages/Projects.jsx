@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Projects() {
     return (
-        <div className="h-screen w-[85%] overflow-y-auto">
+        <div className="w-full h-screen grow-1 overflow-y-auto">
             <div className='flex flex-col justify-center items-center px-20'>
                 {projectlist.map((project) => (
                     <div className="h-screen flex justify-evenly items-center w-full" key={project.id}>

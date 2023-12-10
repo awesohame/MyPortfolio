@@ -3,7 +3,7 @@ import './Home.css';
 
 export default function Home() {
     return (
-        <div className="h-screen w-[85%]">
+        <div className="w-full h-screen grow-1">
             {/* <div className="border-2 h-3/4 w-full text-6xl flex flex-col justify-center pl-16">
                 <p className="m-2">Hi!</p>
                 <p className="m-2">I am Soham Aversekar</p>

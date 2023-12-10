@@ -3,7 +3,7 @@ import resume from '../assets/resume.pdf';
 
 export default function Resume() {
     return (
-        <div className='h-screen w-[85%]'>
+        <div className='w-full h-screen grow-1'>
             <embed src={resume} type="application/pdf" className='w-full h-full' />
         </div>
     )

@@ -2,7 +2,7 @@ import './About.css';
 
 export default function About() {
     return (
-        <div className="h-screen w-[85%]">
+        <div className="w-full h-screen grow-1">
             <div className="h-full flex flex-col justify-center items-center text-[#1a1b1b]">
                 <p className='text-6xl font-extrabold m-3 w-[85%]'>
                     Hi!
