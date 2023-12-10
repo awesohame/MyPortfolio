@@ -9,7 +9,7 @@ export default function Projects() {
                 {projectlist.map((project) => (
                     <div className="h-screen flex justify-evenly items-center w-full" key={project.id}>
 
-                        <img src={project.image} alt={project.name} className="w-[55%] rounded-3xl border-2 border-[#1a1b1b]" />
+                        <img src={project.image} alt={project.name} className="w-[55%] rounded-3xl border-2 border-[#1a1b1b] projectimg" />
 
                         <div className="m-2 text-[#1a1b1b] p-2">
                             <h2 className="text-4xl text-black text-center">{project.title}</h2>

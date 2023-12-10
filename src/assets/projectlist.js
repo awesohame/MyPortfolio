@@ -1,6 +1,7 @@
 import DiscordBotimg from "./DiscordBot.png";
 import StudySprintimg from "./StudySprint.png";
 import Portfolioimg from "./Portfolio.png";
+import WeatherAppimg from "./WeatherApp.png";
 
 const projectlist = [
     {
@@ -24,14 +25,24 @@ const projectlist = [
         id: 2,
     },
     {
+        title: "Weather App",
+        desc:
+            "Weather app using OpenWeatherMap API.",
+        image: WeatherAppimg,
+        site: "",
+        code: "https://github.com/awesohame/WeatherApp",
+        used: ["ReactJS", "HTML", "CSS", "OpenWeatherMap API"],
+        id: 4,
+    },
+    {
         title: "Portfolio Site",
         desc:
             "A portfolio website to showcase my projects.",
         image: Portfolioimg,
         site: "",
-        code: "https://github.com/awesohame/PortfolioSite",
-        used: ["ReactJS", "HTML", "CSS"],
-        id: 3,
+        code: "https://github.com/awesohame/MyPortfolio",
+        used: ["ReactJS", "HTML", "CSS", "TailwindCSS"],
+        id: 4,
     },
 ];
 
