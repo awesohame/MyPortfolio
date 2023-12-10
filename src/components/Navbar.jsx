@@ -37,8 +37,8 @@ export default function Navbar() {
     const [expanded, setExpanded] = useState(true);
     //h-screen shrink-0 bg-[#24282d] basis-[5%]
     return (
-        <div className={`h-screen shrink-0 bg-[#24282d] ${expanded ? "basis-[15%]" : "basis-[5%]"}`}>
-            <div className="flex justify-end items-center w-full h-1/5">
+        <div className={`h-screen shrink-0 bg-[#24282d] ${expanded ? "basis-[14rem]" : "basis-[6rem]"}`}>
+            <div className="flex justify-center items-center w-full h-1/5">
                 {expanded && (<div className='flex justify-center items-center w-full'>
                     <img src={navimg} alt="img" className="h-20 w-20" />
                 </div>)}
@@ -57,14 +57,13 @@ export default function Navbar() {
                     {navdata.map((item, index) => (
                         <li className="h-full w-full flex justify-center items-center" key={index}>
                             <NavLink to={item.link}
-                                // className='rounded-lg text-2xl/10 p-3 m-2 w-3/4 flex items-center hover:bg-[#1a1b1b]'
                                 className={({ isActive }) => {
-                                    return ('rounded-lg text-2xl/8 p-4 m-1 w-[80%] flex items-center hover:bg-[#1a1b1b] '
-                                        + ((isActive) ? ' bg-[#1a1b1b]' : ' bg-[#24282d]')
+                                    return (`rounded-lg text-2xl/8 p-4 my-1 mx-4 flex items-center hover:bg-[#1a1b1b] ${expanded ? 'w-[12rem]' : 'w-[4rem]'} `
+                                        + ((isActive) ? ' bg-[#1a1b1b] text-[#eeeeee]' : ' bg-[#24282d] text-[#c0c0c0]')
                                     )
                                 }}>
-                                <FontAwesomeIcon icon={item.icon} className='h-8 w-8 text-[#eeeeee]' />
-                                {expanded && (<p className="pl-3 text-[#eeeeee]">{item.name}</p>)}
+                                <FontAwesomeIcon icon={item.icon} className={`h-8 w-8`} />
+                                {expanded && (<p className="pl-3">{item.name}</p>)}
                             </NavLink>
                         </li>
                     ))}
@@ -75,7 +74,7 @@ export default function Navbar() {
                 <NavLink to='/resume'
                     // className='rounded-lg text-2xl/10 p-3 m-2 w-3/4 flex items-center hover:bg-[#1a1b1b]'
                     className={({ isActive }) => {
-                        return ('h-1/2 w-full flex items-center justify-center font-extrabold text-3xl hover:bg-[#ffc54d] hover:text-[#1a1b1b] '
+                        return ('transition-all duration-[450ms] h-1/2 w-full flex items-center justify-center font-extrabold text-3xl hover:bg-[#ffc54d] hover:text-[#1a1b1b] '
                             +
                             ((isActive) ? ' bg-[#ffc54d] text-[#1a1b1b]' : ' bg-[#1a1b1b] text-[#eeeeee]')
                         )
