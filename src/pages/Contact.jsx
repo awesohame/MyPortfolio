@@ -3,24 +3,52 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const contacts = [
+    {
+        icon: faGithub,
+        link: 'https://github.com/awesohame',
+    },
+    {
+        icon: faLinkedinIn,
+        link: 'https://linkedin.com/in/sohamaversekar',
+    },
+    {
+        icon: faInstagram,
+        link: 'https://instagram.com/awesohame',
+    },
+    {
+        icon: faEnvelope,
+        link: 'mailto:sohamaversekar777@gmail.com',
+    },
+]
 
 export default function Contact() {
     return (
-        <div className='w-full h-screen grow-1 flex flex-col justify-center items-center'>
-            <p className='text-6xl text-[#24282d] font-bold m-4'>Connect with me</p>
+        <div className='w-full h-screen flex flex-col justify-center items-center'
+        >
+            <motion.p
+                className='text-6xl text-[#24282d] font-bold m-4'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.2, ease: 'easeOut', delay: 0.4 }}
+            >Connect with me</motion.p>
+
             <div className='flex justify-center items-center m-4'>
-                <Link to="https://github.com/awesohame" target="_blank" rel="noreferrer" className='text-[#24282d] hover:text-[#ffc54d] transition-all duration-500'>
-                    <FontAwesomeIcon icon={faGithub} className='text-6xl mx-6' />
-                </Link>
-                <Link to="https://linkedin.com/in/sohamaversekar" target="_blank" rel="noreferrer" className='text-[#24282d] hover:text-[#ffc54d] transition-all duration-500'>
-                    <FontAwesomeIcon icon={faLinkedinIn} className='text-6xl mx-6' />
-                </Link>
-                <Link to="https://instagram.com/awesohame" target="_blank" rel="noreferrer" className='text-[#24282d] hover:text-[#ffc54d] transition-all duration-500'>
-                    <FontAwesomeIcon icon={faInstagram} className='text-6xl mx-6' />
-                </Link>
-                <Link to="mailto:sohamaversekar777@gmail.com" target="_blank" rel="noreferrer" className='text-[#24282d] hover:text-[#ffc54d] transition-all duration-500'>
-                    <FontAwesomeIcon icon={faEnvelope} className='text-6xl mx-6' />
-                </Link>
+                {contacts.map((contact, index) => (
+                    <motion.div
+                        key={index}
+                        className='mx-6'
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1.2, ease: 'easeOut', delay: 1.6 + (index * 0.4) }}
+                    >
+                        <Link to={contact.link} target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={contact.icon} className='text-6xl text-[#24282d] hover:text-[#ffc54d] hover:scale-[1.1] transition-all duration-500' />
+                        </Link>
+                    </motion.div>
+                ))}
             </div>
         </div>
     )

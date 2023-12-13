@@ -1,9 +1,10 @@
 import './Skills.css';
 import skilllist from '../assets/skilllist';
+import { motion } from 'framer-motion';
 
 export default function Skills() {
     return (
-        <div className='w-full h-screen grow-1 flex justify-center'>
+        <div className='w-full h-screen flex justify-center'>
             <div className='w-[85%] h-full'>
                 {skilllist.map((skill) => (
                     <div className="border-y-2 border-[#24282d] h-1/3 flex items-center" key={skill.id}>
@@ -12,7 +13,14 @@ export default function Skills() {
                         </div>
                         <div className='w-4/5 h-[85%] flex justify-evenly items-center flex-wrap'>
                             {skill.images.map((image, index) => (
-                                <img className='h-[40%] mx-6' src={image} key={index} />
+                                <motion.img
+                                    className='h-[40%] mx-6'
+                                    src={image}
+                                    key={index}
+                                    initial={{ x: '100%', opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 + (index * 0.3) }}
+                                />
                             ))}
                         </div>
                     </div>

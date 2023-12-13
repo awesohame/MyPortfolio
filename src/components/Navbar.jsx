@@ -46,7 +46,7 @@ export default function Navbar() {
                     <button onClick={() => {
                         setExpanded(!expanded);
                     }} className='h-10 w-10 text-[#eeeeee] cursor-pointer'>
-                        {expanded ? <FontAwesomeIcon icon={faCircleChevronLeft} className='h-full w-full' /> : <FontAwesomeIcon icon={faCircleChevronRight} className='h-full w-full' />}
+                        {expanded ? <FontAwesomeIcon icon={faCircleChevronLeft} className='h-full w-full hover:scale-110 transition-all duration-400' /> : <FontAwesomeIcon icon={faCircleChevronRight} className='h-full w-full hover:scale-110 transition-all duration-400' />}
                     </button>
 
                 </div>
