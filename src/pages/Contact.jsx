@@ -45,7 +45,7 @@ export default function Contact() {
                         transition={{ duration: 1.2, ease: 'easeOut', delay: 1.6 + (index * 0.4) }}
                     >
                         <Link to={contact.link} target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={contact.icon} className='text-6xl text-[#24282d] hover:text-[#ffc54d] hover:scale-[1.1] transition-all duration-500' />
+                            <FontAwesomeIcon icon={contact.icon} className='text-6xl text-[#24282d] hover:text-[#ffc54d] hover:scale-[1.2] transition-all duration-500' />
                         </Link>
                     </motion.div>
                 ))}
