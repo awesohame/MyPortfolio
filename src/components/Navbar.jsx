@@ -33,7 +33,16 @@ let navdata = [
     }
 ]
 export default function Navbar() {
-    const [expanded, setExpanded] = useState(true);
+    let onMobile = false;
+    (window.innerWidth < 1280) ? onMobile = true : onMobile = false;
+
+    // useEffect(() => {
+    //     window.addEventListener('resize', () => {
+    //         (window.innerWidth < 1280) ? onMobile = true : onMobile = false;
+    //     })
+    // }, [window.innerWidth]);
+
+    const [expanded, setExpanded] = useState(!onMobile);
     //h-screen shrink-0 bg-[#24282d] basis-[5%]
     return (
         <>
@@ -58,9 +67,13 @@ export default function Navbar() {
                         {navdata.map((item, index) => (
                             <li className="h-full w-full flex justify-center items-center" key={index}>
                                 <NavLink to={item.link}
-                                    onClick={() => {
-                                        setExpanded(false);
-                                    }}
+
+                                    {...(onMobile ? {
+                                        onClick: () => {
+                                            setExpanded(!expanded);
+                                        }
+                                    } : {}
+                                    )}
                                     className={({ isActive }) => {
                                         return (`rounded-lg text-2xl/8 p-4 my-1 mx-4 flex items-center hover:bg-[#1a1b1b] ${expanded ? 'w-[12rem]' : 'w-[4rem]'} `
                                             + ((isActive) ? ' bg-[#1a1b1b] text-[#eeeeee]' : ' bg-[#24282d] text-[#c0c0c0]')
