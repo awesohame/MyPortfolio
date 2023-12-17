@@ -6,7 +6,7 @@ export default function About() {
         <div className="w-full h-screen">
             <div className="h-full flex flex-col justify-center items-center text-[#1a1b1b]">
                 <motion.p
-                    className='text-6xl font-extrabold m-3 w-[85%]'
+                    className='text-4xl xl:text-6xl font-extrabold m-3 w-[85%] mt-8 xl:mt-3'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, ease: 'easeOut', delay: 0.4 }}
@@ -14,7 +14,7 @@ export default function About() {
                     Hi!
                 </motion.p>
                 <motion.p
-                    className='text-6xl m-3 w-[85%]'
+                    className='text-4xl xl:text-6xl m-3 w-[85%]'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, ease: 'easeOut', delay: 2.4 }}
@@ -22,7 +22,7 @@ export default function About() {
                     I'm <span className='font-black text-[#ffc54d]'>Soham Aversekar</span>
                 </motion.p>
                 <motion.p
-                    className='text-2xl m-3 w-[85%]'
+                    className='text-lg xl:text-2xl m-3 w-[85%]'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1.5, ease: 'easeOut', delay: 4.4 }}

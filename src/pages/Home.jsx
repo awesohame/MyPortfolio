@@ -13,9 +13,9 @@ export default function Home() {
             </div> */}
 
             <div className="flex justify-center mt-16 h-3/5">
-                <div className="flex justify-between items-center w-4/5">
+                <div className="flex justify-center xl:justify-between items-center w-4/5 flex-wrap-reverse xl:flex-nowrap">
                     <motion.span
-                        className="text-7xl text-[#1a1b1b] font-black"
+                        className="text-4xl text-center xl:text-left xl:text-7xl text-[#1a1b1b] font-black"
                         initial={{ x: '-100%', opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1.5, type: 'spring', delay: 0.3, stiffness: 110 }}
@@ -25,7 +25,7 @@ export default function Home() {
                     <motion.img
                         src={pfp}
                         alt="pfp"
-                        className="w-[325px]"
+                        className="w-[240px] xl:w-[325px]"
                         initial={{ x: '100%', opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1.5, type: 'spring', delay: 0.3, stiffness: 110 }}
@@ -34,15 +34,15 @@ export default function Home() {
             </div>
             <div className="flex justify-center mt-10 h-1/5">
                 <motion.div
-                    className="text-4xl/[3rem] text-[#1a1b1b] font-bold flex justify-center"
+                    className="text-2xl/[2rem] xl:text-4xl/[3rem] text-[#1a1b1b] font-bold flex flex-col xl:flex-row"
                     initial={{ y: '100%', opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.5, type: 'spring', delay: 1.8, stiffness: 110 }}
                 >
-                    <h1 className='px-2 text-[#ffc54d]'>
+                    <p className='px-2 h-8 xl:h-12 text-[#ffc54d] text-center'>
                         Soham Aversekar
-                    </h1>
-                    <div className='px-2  h-12 overflow-hidden'>
+                    </p>
+                    <div className='px-2 h-8 xl:h-12 overflow-hidden text-center xl:text-left my-2 xl:my-0'>
                         <span className='relative rotate-text'>
                             Student
                             <br /> MERN Stack Developer

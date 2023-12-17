@@ -1,5 +1,9 @@
+.projectimg {
+    box-shadow: 0px 0px 20px 0px #ffc54d;
+}
+
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -10,13 +14,30 @@
 ::-webkit-scrollbar-thumb {
     background: #24282d;
     border-radius: 100vw;
-    border: #61677A solid 3px;
+    border: #61677A solid 1px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #1a1b1b;
 }
 
-.projectimg {
-    box-shadow: 0px 0px 20px 0px #ffc54d;
+@media (min-width: 1280px) {
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #61677A;
+        margin-block: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #24282d;
+        border-radius: 100vw;
+        border: #61677A solid 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #1a1b1b;
+    }
 }

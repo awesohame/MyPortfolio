@@ -38,15 +38,44 @@
 
     33%,
     60% {
-        top: -3rem;
+        top: -2rem;
     }
 
     66%,
     93% {
-        top: -6rem;
+        top: -4rem;
     }
 
     100% {
-        top: -9rem;
+        top: -6rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .rotate-text {
+        animation: rotate 10s ease infinite;
+        animation-delay: 1.5s;
+    }
+
+    @keyframes rotate {
+
+        0%,
+        27% {
+            top: 0;
+        }
+
+        33%,
+        60% {
+            top: -3rem;
+        }
+
+        66%,
+        93% {
+            top: -6rem;
+        }
+
+        100% {
+            top: -9rem;
+        }
     }
 }

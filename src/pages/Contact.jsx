@@ -29,13 +29,13 @@ export default function Contact() {
         <div className='w-full h-screen flex flex-col justify-center items-center'
         >
             <motion.p
-                className='text-6xl text-[#24282d] font-bold m-4'
+                className='text-4xl xl:text-6xl text-[#24282d] font-bold m-4'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.2, ease: 'easeOut', delay: 0.4 }}
             >Connect with me</motion.p>
 
-            <div className='flex justify-center items-center m-4'>
+            <div className='flex justify-center items-center m-4 flex-wrap'>
                 {contacts.map((contact, index) => (
                     <motion.div
                         key={index}
@@ -45,7 +45,7 @@ export default function Contact() {
                         transition={{ duration: 1.2, ease: 'easeOut', delay: 1.6 + (index * 0.4) }}
                     >
                         <Link to={contact.link} target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={contact.icon} className='text-6xl text-[#24282d] hover:text-[#ffc54d] hover:scale-[1.2] transition-all duration-500' />
+                            <FontAwesomeIcon icon={contact.icon} className='text-5xl xl:text-6xl m-3 my-5 text-[#24282d] hover:text-[#ffc54d] hover:scale-[1.2] transition-all duration-500' />
                         </Link>
                     </motion.div>
                 ))}
